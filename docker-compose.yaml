@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  mcp-hub:
+    build: .
+    container_name: mcp-hub
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./mcp-servers.json:/config/mcp-servers.json:ro
+    environment:
+      - PORT=3000
+      # 可添加更多环境变量，如 ACCESS_TOKEN、EXAMPLE_API_KEY 等
+    restart: unless-stopped 

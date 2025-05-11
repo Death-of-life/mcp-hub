@@ -8,3 +8,5 @@ dist/
 .r*
 build/
 /result
+.cursor
+
